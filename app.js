@@ -1,10 +1,15 @@
-var app = require('express')();
-var http = require('http').createServer(app);
+'use strict';
 
-app.get('/', (req, res) => {
-  res.render('index.pug' ,{test : "Furkan "});
+const express = require('express');
+const app = express();
+
+app.set('view engine', 'pug');
+app.set('views', './views');
+
+app.get('/', function (req, res) {
+  res.render('index');
 });
 
-http.listen(process.env.PORT, () => {
-  console.log('listening on *:3000');
+app.listen(process.env.PORT , function () {
+  console.log('Sunucu çalışıyor...');
 });
