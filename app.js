@@ -1,15 +1,11 @@
-'use strict';
+const pug = require('pug');
 
-const express = require('express');
-const app = express();
+// Compile the source code
+const compiler = pug.compileFile(index.pug');
 
-app.set('view engine', 'pug');
-app.set('views', './views');
+app.get ( "/" , (res , res ) => {
 
-app.get('/', function (req, res) {
-  res.render('index');
-});
+res.send (compiler ({test = "Furkan "}))
+}
 
-app.listen(process.env.PORT , function () {
-  console.log('Sunucu çalışıyor...');
-});
+app.listen(process.env.PORT)
