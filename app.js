@@ -2,7 +2,7 @@ var app = require('express')();
 var http = require('http').createServer(app);
 
 app.get('/', (req, res) => {
-  res.render('index' {test : "Furkan "});
+  res.render('index.pug' ,{test : "Furkan "});
 });
 
 http.listen(process.env.PORT, () => {
