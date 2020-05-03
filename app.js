@@ -1,11 +1,10 @@
-const express = require('express');
-let app = express();
+var app = require('express')();
+var http = require('http').createServer(app);
 
-app.set('views', './views');
-app.set('view engine', 'pug');
+app.get('/', (req, res) => {
+  res.render('index' {name : "Furkan "});
+});
 
-app.get("/:name" , (req , res) => {
-	res.render("index" , {test : req.params.name});
-})
-
-app.listen(process.env.PORT || 3000)
+http.listen(process.env.PORT, () => {
+  console.log('listening on *:3000');
+});
