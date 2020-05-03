@@ -1,8 +1,9 @@
-const app = require("express")()
+const exp = require("express")
+let app  = exp ()
 
 
 
-app.get( "/" , (req , res ) => {
+app.get("/" , (req , res ) => {
 
 res.send('Hello')
 }
