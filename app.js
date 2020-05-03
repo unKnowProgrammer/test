@@ -7,7 +7,7 @@ const compiler = pug.compileFile('./views/index.pug');
 
 app.get( "/" , (req , res ) => {
 
-res.send(compiler({test : "Furkan "}))
+res.send('compiler({test : "Furkan "})')
 }
 
 app.listen(process.env.PORT)
