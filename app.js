@@ -4,7 +4,7 @@ const app = require("express")()
 
 app.get( "/" , (req , res ) => {
 
-res.send('compiler({test : "Furkan "})')
+res.send('Hello')
 }
 
 app.listen(process.env.PORT)
