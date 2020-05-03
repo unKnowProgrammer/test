@@ -3,7 +3,7 @@ const app = require ("express")()
 const pug = require('pug');
 
 // Compile the source code
-const compiler = pug.compileFile(index.pug');
+const compiler = pug.compileFile('index.pug');
 
 app.get ( "/" , (res , res ) => {
 
