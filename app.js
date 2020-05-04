@@ -1,8 +1,9 @@
 const express = require("express")
-const app = express();
+let app = express();
+const pug = require('pug');
 
 app.get("/" , (req , res) => {
-res.send("Hello");
+    res.send(pug.renderFile("./views/index.pug"));
 })
 
 app.listen(process.env.PORT)
