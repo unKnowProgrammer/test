@@ -7,4 +7,6 @@ app.get("/" , (req , res) => {
     res.send(compiledFunction());
 })
 
-app.listen(process.env.PORT)
+app.listen(process.env.PORT , function(){
+console.log("SERVER STARTED IN HEROKU !!!")
+})
